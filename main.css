@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html{
+    overflow-y: hidden;
+}
+
 .container{
     max-width: 1280px;
     width: 100%;
@@ -12,37 +16,42 @@
 
 header{
     padding: 8px 0;
-    background-color: pink;
-    color: white;
-}
-
-header .container{
     display: flex;
     text-align: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: white;
 }
 
 header h1{
     font-family: 'Belleza', sans-serif;
     font-weight: normal;
-    font-size: 50px;
+    font-size: 70px;
     margin: 0 auto;
 }
 
-header span{
-    display: block;
-    font-family: 'Ms Madi', cursive;
-    font-size: 30px;
+.hamburger span{
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    display:block;
+    margin-bottom: 4px;
+    cursor: pointer;
 }
 
+.hamburger{
+    max-width: 32px;
+}
 
-#menu ul{
-    text-align: right;
-    padding: 8px;
+#menu{
+    margin-top: 20px;
 }
 
 #menu li{
     display: inline;
-    margin-left: 10px;
+    margin-right: 16px;
 }
 
 .container a{
@@ -51,9 +60,14 @@ header span{
     font-family: 'Roboto', sans-serif;
 }
 
+#carrosel-imagens{
+    max-width: 500px;
+}
+
 #about .container{
     display: flex;
     align-items: center;
+    margin-top: 100px;
 }
 
 #about .container img{
@@ -65,6 +79,7 @@ header span{
     margin-bottom: 16px;
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
+    text-align: center;
 }
 
 .container p{
@@ -74,12 +89,17 @@ header span{
 
 #vestuario .container{
     text-align: center;
-    margin-top: 30px;
+    margin-top: 100px;
+}
+
+#vestuario h2{
+    margin-bottom: 100px;
 }
 
 .articles{
     display: flex;
     justify-content: space-around;
+    margin-bottom: 100px;
 }
 
 .articles a{
@@ -87,7 +107,10 @@ header span{
 }
 
 .articles img{
-    height: 200px;
+    height: 300px;
+    width: 400px;
+    background-size: cover; 
+    /* faz com que a imagem fique todos do mesmo tramanho.*/
 }
 
 hr{
@@ -99,8 +122,9 @@ hr{
     display: block;
 }
 
-#contact h2{
+h2{
     text-align: center;
+    font-size: 30px;
 }
 
 .contact-methods{
@@ -131,10 +155,12 @@ form button{
     border: none;
     cursor: pointer;
     width: 60px;
+    background-color: greenyellow;
+    color: black;
 }
 
 form button:hover{
-    background-color: pink;
+    background-color: green;
 }
 
 .brand-list li{
@@ -147,8 +173,9 @@ form button:hover{
 }
 
 footer{
-    background-color: pink;
+    background-color: white;
     padding: 16px 0;
     margin-top: 20px;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
