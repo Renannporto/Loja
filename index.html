@@ -8,13 +8,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Ms+Madi&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>SUIANI <span>Store</span></h1>
+            <h1>SUIANI</h1>
         </div>
     </header>
+    <div class="container">
+        <div class="cor">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
     <section id="menu">
         <nav class="container">
             <ul>
@@ -32,7 +43,6 @@
     </section>    
     <section id="about">
         <div class="container">
-            <img src="ROUPAS/loja.avif" alt="loja de roupas"/>
             <div>
                 <h2>BEM VINDO A MINHA LOJA</h2>
                 <p>
@@ -41,6 +51,11 @@
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic id eius natus laborum, molestias dolorum perspiciatis dolores maxime repellendus provident harum earum tempore corporis deserunt alias iusto laboriosam quisquam excepturi?
                 </p>
+            </div>
+            <div id="carrosel-imagens">
+                <img src="ROUPAS/vestido.verde.jpg" alt="loja de roupas"/>
+                <img src="ROUPAS/blusa.avif">
+                <img src="ROUPAS/roupa laranja.jpg">
             </div>
         </div>
     </section>
@@ -53,11 +68,11 @@
                     <a href="#vestidos" title="Vestidos">Vestidos</a>
                 </article>
                 <article>
-                    <img src="ROUPAS/calcado.jpg"alt="calçado feminino">
+                    <img src="ROUPAS/calcado.jpg" alt="calçado feminino">
                     <a href="#calçados" title="calçados">Calçados</a>
                 </article>
                 <article>
-                    <img src="ROUPAS/blusa.rosa.jpg"alt="blusa feminina rosa">
+                    <img src="ROUPAS/blusa.rosa.jpg" alt="blusa feminina rosa">
                     <a href="#blusas" title="Blusas">Blusas</a>
                 </article>
             </div>
@@ -112,5 +127,18 @@
             &copy; Todos os direitos reservados - 2023
         </div>
     </footer>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#carrosel-imagens").slick({
+                autoplay: true,
+            });
+            $(".hamburger").click(function(){
+                $("nav").slideToggle(); 
+            });
+        })
+    </script>
 </body>
 </html>
